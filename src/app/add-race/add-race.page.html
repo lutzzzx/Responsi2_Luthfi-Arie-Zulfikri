@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Race</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="stacked">Name</ion-label>
+    <ion-input [(ngModel)]="race.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Description</ion-label>
+    <ion-textarea [(ngModel)]="race.description"></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Schedule</ion-label>
+    <ion-datetime [(ngModel)]="race.schedule"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Track Details</ion-label>
+    <ion-textarea [(ngModel)]="race.track_details"></ion-textarea>
+  </ion-item>
+  <ion-button expand="block" (click)="addRace()">Save</ion-button>
+</ion-content>

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Race Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Check if 'race' is defined before rendering the card -->
+  <ion-card *ngIf="race">
+    <ion-card-header>
+      <ion-card-title>{{ race.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Description:</strong> {{ race.description }}</p>
+      <p><strong>Schedule:</strong> {{ race.schedule }}</p>
+      <p><strong>Track Details:</strong> {{ race.track_details }}</p>
+      <p><strong>Created By:</strong> {{ race.created_by }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

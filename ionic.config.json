@@ -1,0 +1,7 @@
+{
+  "name": "balapan-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

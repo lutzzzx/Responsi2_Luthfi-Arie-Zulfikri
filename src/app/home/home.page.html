@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Dashboard</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/add-race">Add Race</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item
+      *ngFor="let race of races"
+      [routerLink]="['/race-detail', race.id]"
+    >
+      <ion-label (click)="race.id && goToDetails(race.id)">
+        <h2>{{ race.name }}</h2>
+        <p>{{ race.schedule }}</p>
+      </ion-label>
+      <ion-button
+        color="danger"
+        slot="end"
+        (click)="race.id && confirmDelete(race.id)"
+      >
+        Delete
+      </ion-button>
+      <ion-button color="primary" slot="end" (click)="goToEdit(race.id!)">
+        Edit
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
